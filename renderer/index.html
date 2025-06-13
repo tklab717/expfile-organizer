@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+  <title>実験データ整理</title>
+</head>
+<body>
+    <h1>実験データ整理TOOL</h1>
+    <div>
+        <button id="selectFilesBtn">移動元データを選択</button><br />
+        <pre id="srcFiles">(未選択)</pre>
+    </div>
+    
+    <div>
+      <label>実験設備：</label>
+      <input type="text" id="equipmentInput" list="equipmentList" />
+      <datalist id="equipmentList"></datalist>
+    </div>
+  
+    <div>
+      <label>テストシーケンス：</label>
+      <input type="text" id="sequenceInput" list="sequenceList" />
+      <datalist id="sequenceList"></datalist>
+    </div>
+  
+    <div>
+      <label>タスク：</label>
+      <input id="taskInput" list="taskList" placeholder="タスク名を入力または選択" />
+      <datalist id="taskList"></datalist>
+    </div>
+
+    <div>
+        <label for="dateInput">日付を入力</label>
+        <input type="date" id="dateInput" list="dateList" placeholder="例: 2025-06-13" />
+        <datalist id="dateList"></datalist>
+    </div>
+
+    <div>
+      <button id="moveBtn">データ整理する</button>
+      <p id="resultMsg"></p>
+    </div>
+  
+    <script src="renderer.js"></script>
+  </body>
+</html>

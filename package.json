@@ -1,0 +1,35 @@
+{
+    "name": "file-organizer",
+    "version": "1.0.0",
+    "description": "ファイル整理ネイティブアプリ",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron .",
+      "build": "electron-builder"
+    },
+    "build": {
+      "appId": "com.tr.fileorganizer",
+      "productName": "FileOrganizer",
+      "files": [
+        "**/*",
+        "!node_modules/.cache",
+        "!dist",
+        "!build"
+      ],
+      "directories": {
+        "output": "dist"
+      },
+      "mac": {
+        "target": ["dmg", "zip"],
+        "icon": "build/icon.icns"
+      },
+      "win": {
+        "target": ["nsis", "zip"],
+        "icon": "build/icon.ico"
+      }
+    },
+    "devDependencies": {
+      "electron": "^28.3.3",
+      "electron-builder": "^26.0.12"
+    }
+  }
